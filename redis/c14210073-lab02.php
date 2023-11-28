@@ -253,7 +253,8 @@
                     processData: false,
                     data: form_data,
                     success: function(data){
-                        data = JSON.parse(data);
+                        data = JSON.parse(data.data_graph);
+                        console.log(data);
                         if(data.status == '405'){
                             Swal.fire({
                                 title: 'Method Not Allowed!',
